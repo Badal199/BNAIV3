@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BN LAST KING HACK - Predict Income Results</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #222;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        #result-box {
+            border: 5px solid;
+            border-image: linear-gradient(45deg, red, green, blue, yellow) 1;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 2px solid rgba(0,0,0,0.1);
+        }
+        th {
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+        }
+        td {
+            background-color: rgba(255,255,255,0.8);
+        }
+        .rgb-borderline {
+            animation: rgb-border 5s infinite;
+        }
+        @keyframes rgb-border {
+            0% {border-color: red;}
+            25% {border-color: green;}
+            50% {border-color: blue;}
+            75% {border-color: yellow;}
+            100% {border-color: red;}
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #444;
+        }
+        #join-channel {
+            margin-top: 40px;
+            padding: 10px 20px;
+            background-color: #00acee;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #join-channel:hover {
+            background-color: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>BN LAST KING HACK - Predict Income Result</h1>
+    <div id="result-box" class="rgb-borderline">
+        <input type="number" id="inputNumber" placeholder="Enter 3-digit number">
+        <button onclick="showResult()">Show Result</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="resultTable">
+                <!-- Results will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+    <a id="join-channel" href="https://t.me/BNLASTKINGHACK" target="_blank">Join BN LAST KING HACK Telegram Channel</a>
+
+    <script>
+        const pattern = ['SMALL', 'BIG', 'SMALL', 'BIG', 'SMALL', 'SMALL', 'BIG', 'BIG', 'SMALL', 'SMALL', 'BIG', 'SMALL', 'BIG', 'SMALL', 'SMALL', 'BIG', 'SMALL', 'BIG', 'SMALL', 'BIG'];
+        let periodNumber = 1;
+
+        function showResult() {
+            const inputNumber = document.getElementById("inputNumber").value;
+            if (inputNumber.length === 3) {
+                const randomIndex = Math.floor(Math.random() * pattern.length);
+                const result = pattern[randomIndex];
+                const resultRow = `<tr><td>Period ${periodNumber}</td><td>${result}</td></tr>`;
+                document.getElementById("resultTable").insertAdjacentHTML('beforeend', resultRow);
+                periodNumber++;
+            } else {
+                alert("Please enter a 3-digit number.");
+            }
+        }
+    </script>
+</body>
+</html>
